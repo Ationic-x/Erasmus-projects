@@ -4,8 +4,7 @@
     "version": "0.0.0",
     "description": "Bookshelf",
     "main": "app.js",
-    "scripts": {
-    },
+    "scripts": {},
     "author": {
         "name": ""
     },
