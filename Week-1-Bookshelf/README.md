@@ -23,10 +23,10 @@
 
 # How to use
 
-1. Start **Node.js** and **Mongo.db**
+1. Starts **Node.js** and **Mongo.db**
 2. Open a terminal and go to folder directory **CD /path/of/the/folder**
-3. Run **node app.js**
-4. Start postman and use methods
+3. Runs **node app.js**
+4. Starts postman and use methods
 5. Methods
    - Get all books **GET http://localhost:5000/v1/books**
    - Filter books by ID **GET http://localhost:5000/v1/books/[id]**
