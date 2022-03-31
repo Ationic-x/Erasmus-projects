@@ -190,7 +190,7 @@ app.put('/v1/books/:id', async (req, res) => {
     var desc = info.desc
     //Check
     if (index < 0) {
-        return res.status(404).json({ success: false, msg: `No book with id ${id}` })
+        return res.status(400).json({ success: false, msg: `No book with id ${id}` })
     }
     if (!(info.price > 0)) {
         return res.status(400).json({ success: false, msg: 'Please use a correct value for the price' })
