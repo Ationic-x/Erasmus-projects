@@ -124,12 +124,12 @@ app.get('/v1/books',async (req, res) => {
                     }
                 }
             } else {
-                return res.status(404).json({ success: false, msg: `Use the corrects parameters` })
+                return res.status(400).json({ success: false, msg: `Use the corrects parameters` })
             }
         }
         //Responses
         if (web[0] === undefined) {
-            return res.status(404).json({ success: false, msg: `Use the corrects parameters` })
+            return res.status(400).json({ success: false, msg: `Use the corrects parameters` })
         }
         return res.send(web)
     }
@@ -142,7 +142,7 @@ app.get('/v1/books/:id',async (req, res) => {
     const singleProduct = books.find((product) => product._id === Number(id))
     //Responses
     if (!singleProduct) {
-        return res.status(404).json({ success: false, msg: `The book with id ${id} does not exist` })
+        return res.status(400).json({ success: false, msg: `The book with id ${id} does not exist` })
     }
     return res.send(singleProduct)
 })
@@ -213,8 +213,8 @@ app.put('/v1/books/:id', async (req, res) => {
         })
         const update = await book.find()
         const Updated_Book = update[index]
-        return res.status(200).json({ success: true, msg: 'Change done', Outdaded_Book, Updated_Book })
-    } return res.status(404).json({ success: false, msg: `Don't matches id ${id} and id ${info.id}` })
+        return res.status(201).json({ success: true, msg: 'Change done', Outdaded_Book, Updated_Book })
+    } return res.status(400).json({ success: false, msg: `Don't matches id ${id} and id ${info.id}` })
 })
 
 //Delete by id
@@ -224,18 +224,18 @@ app.delete('/v1/books/:id', async (req, res) => {
     //Cheack and searh book index
     const index = books.findIndex(book => book._id === Number(id))
     if (index < 0) {
-        return res.status(404).json({ success: false, msg: `No book with id ${id}` })
+        return res.status(400).json({ success: false, msg: `No book with id ${id}` })
     }
     const Deleted_Book = books[index]
     //Delete
     await book.deleteOne({_id: id})
-    return res.status(200).json({ success: true, msg: 'Deleted', Deleted_Book})
+    return res.status(201).json({ success: true, msg: 'Deleted', Deleted_Book})
 })
 
 //Delete all
 app.delete('/v1/books/', async (req, res) => {
     await book.remove({})
-    return res.status(200).json({ success: true, msg: 'All books was delete' })
+    return res.status(201).json({ success: true, msg: 'All books was delete' })
 })
 
 //Port 5000
