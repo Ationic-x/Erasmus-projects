@@ -3,4 +3,4 @@ Practice, learning and projects to improve my skills in programming while I'm in
 
 - Week 1 Bookshelf (REST-API of a library (search, update, delete books))
 
-## All feedback is welcome.
+***All feedback is welcome***
