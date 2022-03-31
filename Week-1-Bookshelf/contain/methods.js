@@ -110,20 +110,20 @@ app.get('/v1/books',async (req, res) => {
         }
         //Check real property
         //Resolve multiple filtered data
-        var n = 0
-        for (var i = 0; books[i] !== undefined; i++) {
+        var j = 0;
+        for (var i = 0; Object.keys(filters)[i] !== undefined; i++) {
             if (Object.keys(filters)[i] === ('id') ||
             Object.keys(filters)[i] === ('title') ||
             Object.keys(filters)[i] === ('author') ||
             Object.keys(filters)[i] === ('cover') ||
             Object.keys(filters)[i] === ('price') ||
             Object.keys(filters)[i] === ('desc')) {
-                for (var j = n; books[j] !== undefined; j++, n++) {
+                for (var j; books[j] !== undefined; j++) {
                     if (index.filter(book => book.includes(j)).length === 6) {
                         web.push(books[j])
                     }
                 }
-            } else if (Object.keys(filters)[i] !== undefined) {
+            } else {
                 return res.status(404).json({ success: false, msg: `Use the corrects parameters` })
             }
         }
