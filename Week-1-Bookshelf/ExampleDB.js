@@ -1,0 +1,36 @@
+[{
+    "_id": 1,
+    "title": "Madness and Civilization",
+    "author": "Michel Foucault",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/c/ca/Madness_and_Civilization_%28Plon_edition%29.jpg",
+    "price": 17.99,
+    "desc": "Michel Foucault examines the archeology of madness in the West from 1500 to 1800 - from the late Middle Ages, when insanity was still considered part of everyday life and fools and lunatics walked the streets freely, to the time when such people began to be considered a threat, asylums were first built, and walls were erected between the insane and the rest of humanity.",
+}, {
+    "_id": 2,
+    "title": "Love Is a Dog from Hell",
+    "author": "Charles Bukowski",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/41oFYzFQokL._SX327_BO1,204,203,200_.jpg",
+    "price": 15.49,
+    "desc": "A book that captures the Dirty Old Man of American letters at his fiercest and most vulnerable, on a subject that hits home with all of us. Charles Bukowski was a man of intense emotions, someone an editor once called a passionate madman. Alternating between tough and gentle, sensitive and gritty, Bukowski lays bare the myriad facets of love its selfishness and its narcissism, its randomness, its mystery and its misery, and, ultimately, its true joyfulness, endurance, and redemptive power.",
+}, {
+    "_id": 3,
+    "title": "Mist",
+    "author": "Miguel de Unamuno",
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/1914%2C_Niebla_%28nivola%29%2C_editoral_Renacimiento%2C_Miguel_de_Unamuno.jpg/330px-1914%2C_Niebla_%28nivola%29%2C_editoral_Renacimiento%2C_Miguel_de_Unamuno.jpg",
+    "price": 19.80,
+    "desc": "A towering figure of political, philosophical, and literary controversy, Miguel de Unamuno was the undisputed intellectual leader of the brilliant Generation of 1898 that ushered in a second golden age of Spanish culture. In the vast and varied body of his work, none conveys his intellectual legacy more effectively than Mist, a monument of the philosophical novel and a masterpiece of modern experimental fiction.",
+}, {
+    "_id": 4,
+    "title": "Cabal",
+    "author": "Clive Barker",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/b/b9/CabalBarker.jpg",
+    "price": 14.89,
+    "desc": "For more than two decades, Clive Barker has twisted the worlds of horrific and surrealistic fiction into a terrifying, transcendent genre all his own. With skillful prose, he enthralls even as he horrifies; with uncanny insight, he disturbs as profoundly as he reveals. Evoking revulsion and admiration, anticipation and dread, Barker's works explore the darkest contradictions of the human condition: our fear of life and our dreams of death.",
+}, {
+    "_id": 5,
+    "title": "Naked Lunch",
+    "author": "William S. Burroughs",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/b/b8/NakedLunch1stedition.jpg",
+    "price": 14.49,
+    "desc": "Exerting its influence on the relationship of art and obscenity, it is one of the books that redefined not just literature but American culture. For the Burroughs enthusiast and the neophyte, this volume that contains final-draft typescripts, numerous unpublished contemporaneous writings by Burroughs, his own later introductions to the book, and his essay on psychoactive drugs is a valuable and fresh experience of a novel that has lost none of its relevance or satirical bite.",
+}]
