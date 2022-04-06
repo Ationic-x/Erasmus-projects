@@ -14,7 +14,6 @@ export async function getb (req, res) {
         return res.send(await book.find({ title: { $in: [ new RegExp(req.query.title, 'i') ] }}))   
     }
     return res.send(await book.find())
-
 }
 
 //Filter by params
