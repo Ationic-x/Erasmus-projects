@@ -1,21 +1,19 @@
 import * as BookController from './book.controller.js'
 import express from 'express'
-var router = express();
+var app = express();
 
-router.use(express.json())
-router.use(express.urlencoded({ extended: false}))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false}))
 
-router.get('/', BookController.homeb)
-router.get('/v1/books', BookController.getb)
-router.get('/v1/books/:id', BookController.filterb)
+app.get('/', BookController.homeb)
+app.get('/v1/books', BookController.getb)
+app.get('/v1/books/:id', BookController.filterb)
 
-router.post('/v1/books', BookController.addb)
+app.post('/v1/books', BookController.addb)
 
-router.put('/v1/books/:id', BookController.updateb)
+app.put('/v1/books/:id', BookController.updateb)
 
-router.delete('/v1/books', BookController.deleteallb)
-router.delete('/v1/books/:id', BookController.deleteb)
+app.delete('/v1/books', BookController.deleteallb)
+app.delete('/v1/books/:id', BookController.deleteb)
 
-router.listen(5000)
-
-export var router
+export var app

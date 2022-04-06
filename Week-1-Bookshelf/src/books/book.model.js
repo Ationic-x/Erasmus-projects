@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-mongoose.connect('mongodb://localhost/booksdb')
 
 const rstring = {type: String, required: true }
 const rnumber = {type: Number, required: true}
