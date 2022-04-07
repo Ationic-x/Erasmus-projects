@@ -18,7 +18,7 @@
   - Express v.4.17.3
   - Mongoose v.6.2.9
   - Nodemon v.2.0.15 (in the development)
-  - uuid v.8.3.2"
+  - uuid v.8.3.2
 - MongoDB v.5.0.6
 - MongoDB Compass v.1.30.1
 - Docker desktop v.4.6.1
