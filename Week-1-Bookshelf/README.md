@@ -23,7 +23,7 @@
 
 # How to use
 
-1. Start **Node.js** and **Mongo.db**
+1. Start **Node.js** and **Mongodb**
 2. Open a terminal and go to folder directory **CD /path/of/the/folder**
 3. Run **node index.js**
 4. Start postman and use methods
