@@ -30,7 +30,7 @@
 5. Methods
    - Get all books **GET http://localhost:5000/v1/books**
    - Filter books by ID **GET http://localhost:5000/v1/books/[id]**
-   - Filter books by any parameter **GET http://localhost:5000/v1/books[?title=value]**
+   - Filter books by any parameter **GET http://localhost:5000/v1/books?title=[something]**
    - Add a book **POST http://localhost:5000/v1/books**
    - Update a book **PUT http://localhost:5000/v1/books/[id]**
    - Delete a book **DELETE http://localhost:5000/v1/books/[id]**
