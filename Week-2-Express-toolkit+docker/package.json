@@ -1,0 +1,17 @@
+{
+    "name": "week-2-bookdocker",
+    "version": "0.0.0",
+    "description": "Bookshelf + Toolkit + Docker",
+    "main": "app.js",
+    "scripts": {
+    },
+    "author": {
+        "name": ""
+    },
+    "dependencies": {
+        "express": "^4.17.3",
+        "express-toolkit": "^0.8.0",
+        "mongoose": "^6.2.9",
+        "uuid": "^8.3.2"
+    }
+}
