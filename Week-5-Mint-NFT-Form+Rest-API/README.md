@@ -47,4 +47,4 @@
    - Create your collection **POST http://localhost:5000/v0/nfts/collection**
    - Mint your nft **POST http://localhost:5000/v0/nfts/mint**
 
-**For more accurate information visit the wiki**
+**For more explained information visit the wiki**
