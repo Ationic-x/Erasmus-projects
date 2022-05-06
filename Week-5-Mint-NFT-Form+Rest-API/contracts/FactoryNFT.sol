@@ -7,10 +7,9 @@ contract FactoryNFT{
     ContractNFT[] private _nft;
 
     //Create a new ContractNFT inside of array
-    function Collection(string memory name, string memory symbol) public returns(uint256){
+    function Collection(string memory name, string memory symbol) public{
         ContractNFT nft = new ContractNFT(name, symbol);
         _nft.push(nft);
-        return _nft.length;
     }
 
     //Call contract inside the array with the index, an call function mint externally

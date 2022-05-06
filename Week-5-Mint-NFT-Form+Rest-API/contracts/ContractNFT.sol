@@ -14,13 +14,12 @@ contract ContractNFT is ERC721URIStorage, Ownable {
     constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
 
     //Basic mint function with a max supply, you can't mint higher than this
-    function mint(address _recipient, string memory _tokenURI, uint256 _maxSupply) public onlyOwner returns (uint256)
+    function mint(address _recipient, string memory _tokenURI, uint256 _maxSupply) public onlyOwner
     {
         supply.increment();
         uint256 newItemId = supply.current();
         require(newItemId <= _maxSupply);
         _mint(_recipient, newItemId);
         _setTokenURI(newItemId, _tokenURI);
-        return newItemId;
     }
 }
