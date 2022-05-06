@@ -26,7 +26,7 @@
   - nft.storage v.6.2.0
   - hardhat v.2.9.3
   - @nomiclabs/hardhat-ethers v.2.0.5
-  - @openzeppelin/contracts v^4.6.0
+  - @openzeppelin/contracts v.4.6.0
 - MongoDB v.5.0.6
 - MongoDB Compass v.1.30.1
 - ngrok (free, the latest in 6/05/22)
@@ -49,4 +49,4 @@
    - Create your collection **POST http://localhost:5000/nfts/v0/collection**
    - Mint your nft **POST http://localhost:5000/nfts/v0/mint**
 
-**For more explained information visit the wiki**
+**[For more explained information visit the wiki](https://github.com/Ationic-x/Erasmus-projects/wiki/Week-5-Mint-NFT-Form-Rest-API)**
