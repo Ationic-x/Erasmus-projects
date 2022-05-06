@@ -33,7 +33,7 @@
 
 # How to use
 
-1. Start **Node.js**, **Mongo.db** and **ngrok** the last with **http** (with **ngrok http (port used (in my API 5000 default))**)
+1. Start **Node.js**, **Mongo.db** and **ngrok** the last with **ngrok http (port used (in my API 5000 default))**
 1. Go to your website form, choose webhook option and add the given url by ngrok + **/nfts/port**
 1. Go to the file **.env**, fill the parameters with the corresponding (at this moment you don't have contract address).
 1. Let's deploy the contract using hardhat **npx hardhat run scripts/deploy-contract.js --network PolygonMumbai** (I'm using Mumbai tesnet so you should change it or get mumbai tokens in some faucets)
