@@ -37,3 +37,5 @@
    - Update a book **PUT http://localhost:5000/v1/books/[uuid]**
    - Delete a book **DELETE http://localhost:5000/v1/books/[uuid]**
    - Delete all books **DELETE http://localhost:5000/v1/books**
+
+**[For more accurate information visit the wiki](https://github.com/Ationic-x/Erasmus-projects/wiki/Week-2-Express-toolkit-docker)**
