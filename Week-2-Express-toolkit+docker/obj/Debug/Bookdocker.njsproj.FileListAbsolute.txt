@@ -1,0 +1,3 @@
+C:\Users\Ismael\Desktop\Apio SRL\Proyecto Semana 1\Bookshelf\Bookshelf\obj\Debug\Bookshelf.njsproj.AssemblyReference.cache
+C:\Users\Ismael\Desktop\Apio SRL\Proyecto Semana 1\Bookshelf\Bookshelf\obj\Debug\Bookshelf.njsproj.CoreCompileInputs.cache
+C:\Users\Ismael\Desktop\Apio SRL\Proyecto Semana 1\Bookshelf\Bookshelf\bin\Microsoft.NodejsTools.WebRole.dll
