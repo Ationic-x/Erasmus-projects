@@ -40,6 +40,7 @@
 1. Copy the returned addres of the contract and end with **.env**.
 1. Let's run your API, write **node app.js** at this point you don't need touch more terminals, only if you want see status and console logs.
 1. You can acces to the basic website with information in **localhost:5000/nfts** (you also can use the url given by ngrok)
+1. Before nothing go to the path **/scripts/mail.js** and change the email for one of your own.
 1. Go to your form and submit like a client the form (important, the form model that I'm using have 6 options and the amount to mint and email (with her IDs) this should change for you form model)
 1. At this point the email putted was mailed and you have store her data in mongoDB, copy the uuid (that we use like API-Key)
 1. Go to postman in **Authorization** uses type **API Key** with Key **APIO_KEY**(or whatever you have) and the value the **uuid**, you have 4 endpoints
