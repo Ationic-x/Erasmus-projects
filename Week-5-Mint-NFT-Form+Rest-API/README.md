@@ -42,9 +42,9 @@
 7. Go to your form and submit like a client the form (important, the form model that I'm using have 6 options and the amount to mint and email (with her IDs) this should change for you form model)
 8. At this point the email putted was mailed and you have store her data in mongoDB, copy the uuid (that we use like API-Key)
 9. Go to postman in **Authorization** uses type **API Key** with Key **APIO_KEY**(or whatever you have) and the value the **uuid**, you have 4 endpoints
-   - Store file in IPFS and NFT.Storage **POST http://localhost:5000/v0/nfts/file**
-   - Store metada in IPFS and NFT.Storage **POST http://localhost:5000/v0/nfts/metadata**
-   - Create your collection **POST http://localhost:5000/v0/nfts/collection**
-   - Mint your nft **POST http://localhost:5000/v0/nfts/mint**
+   - Store file in IPFS and NFT.Storage **POST http://localhost:5000/nfts/v0/file**
+   - Store metada in IPFS and NFT.Storage **POST http://localhost:5000/nfts/v0metadata**
+   - Create your collection **POST http://localhost:5000/nfts/v0/collection**
+   - Mint your nft **POST http://localhost:5000/nfts/v0/mint**
 
 **For more explained information visit the wiki**
