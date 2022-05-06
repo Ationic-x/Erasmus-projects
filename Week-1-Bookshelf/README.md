@@ -37,4 +37,4 @@
    - Delete all books **DELETE http://localhost:5000/v1/books**
 6. Extra: if you want testing without make a data base you have a example data base **ExampleDB.js** with 5 books and her values, only need to import it to mongoDB.
 
-**[For more accurate information visit the wiki](https://github.com/Ationic-x/Erasmus-projects/wiki/Week-1-Bookshelf)**
+**[For more explained information visit the wiki](https://github.com/Ationic-x/Erasmus-projects/wiki/Week-1-Bookshelf)**
