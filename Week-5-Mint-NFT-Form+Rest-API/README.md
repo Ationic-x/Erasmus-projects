@@ -33,6 +33,7 @@
 
 # How to use
 
+1. Important before all you should make 2 folders inside another one (this happens because github don't allow publish empty folders), the first folder is called **Temporary** and inside **img** and **metadata**.
 1. Start **Node.js**, **Mongo.db** and **ngrok** the last with **ngrok http (port used (in my API 5000 default))**
 1. Go to your website form, choose webhook option and add the given url by ngrok + **/nfts/port**
 1. Go to the file **.env**, fill the parameters with the corresponding (at this moment you don't have contract address).
