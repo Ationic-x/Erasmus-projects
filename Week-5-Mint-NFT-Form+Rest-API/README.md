@@ -32,7 +32,7 @@
 - ngrok (free, the latest in 6/05/22)
 
 # How to use
-
+# Base
 1. Important before all you should make 2 folders inside another one (this happens because github don't allow publish empty folders), the first folder is called **Temporary** and inside **img** and **metadata**.
 1. Start **Node.js**, **Mongo.db** and **ngrok** the last with **ngrok http (port used (in my API 5000 default))**
 1. Go to your website form, choose webhook option and add the given url by ngrok + **/nfts/port**
@@ -49,5 +49,7 @@
    - Store metada in IPFS and NFT.Storage **POST http://localhost:5000/nfts/v0metadata**
    - Create your collection **POST http://localhost:5000/nfts/v0/collection**
    - Mint your nft **POST http://localhost:5000/nfts/v0/mint**
+# Client
+Actually when you deploy the **Node.js** with **node app.js** you can see a client guide with images like a docs, in the path **localhost:5000/nfts**, the idea is like is the front-end website for the cliente, but also is useful to learn how works the API.
 
 **[For more explained information visit the wiki](https://github.com/Ationic-x/Erasmus-projects/wiki/Week-5-Mint-NFT-Form-Rest-API)**
