@@ -92,8 +92,8 @@ async function PFile(req,res){
 async function PMetada(req,res){
   if (await ApiAuth(req, res)) return
   const b = await req.body
-  if (!b.name || !b.image || !b.description) return res.send('Requiered parameters not sent')
-  if (b.attributes && (!b.attributes.trait_type || !b.attributes.value)) return res.send ('Requiered parameters not sent')
+  if (!b.name || !b.image || !b.description) return res.send('Requiered parameters not sent: name, image or description')
+  if (b.attributes && (!b.attributes.trait_type || !b.attributes.value)) return res.send ('Requiered parameters not sent: trait_type or value')
   const bname = await b.name + '.json'
   const Pname = await req.headers.apio_key + '/' + bname
   await fs.mkdir(`./temporary/metadata/${req.headers.apio_key}`, {recursive: true}, function (err) {if (err) throw (err)})
@@ -122,7 +122,7 @@ async function PCollection(req,res){
       console.error(error)
       process.exit(1)
   })
-  await NFTModel.updateOne({uuid: req.headers.apio_key}, { index: ((await NFTModel.find()).length - 1)})
+  await NFTModel.updateOne({uuid: req.headers.apio_key}, { index: ((await NFTModel.find({index: { $gte: 0}})).length)})
   return await res.send(Created)
 }
 
@@ -132,7 +132,8 @@ async function PMint(req,res){
   if (await ApiAuth(req, res)) return
   const b = await req.body
   if (!b.wallet || !b.metadata) return res.send('Requiered parameters not sent')
-  const Data = await NFTModel.find({'uuid': req.headers.apio_key})
+  const Data = (await NFTModel.find({'uuid': req.headers.apio_key}))[0]
+  console.log(Data.index, b.wallet, Data.amount, b.metadata)
   const Minted = await Mint.Fmint(Data.index, b.wallet, Data.amount, b.metadata)
   .catch((error) => {
       console.error(error)

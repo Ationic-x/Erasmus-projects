@@ -1,15 +1,191 @@
 <!DOCTYPE html>
 <html>
-<title>Apio web</title>
-<body style="text-align: center";>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<style>
+label {
+    text-align: center;
+}
 
-<h1>Endpoints</h1>
-<h2>Minting</h2>
-<p>/v0/mint</p>
-<h2>Upload metadata to IPFS</h2>
-<p>/v0/metada</p>
-<h2>Upload a file to IPFS</h2>
-<p>/v0/file</p>
+.ac-container label {
+    font-family: 'Roboto';
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color: #777;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+    line-height: 33px;
+    font-size: 30px;
+    background: #fff;
+    background: -moz-linear-gradient(top,#fff 1%,#eaeaea 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(1%,#fff),color-stop(100%,#eaeaea));
+    background: -webkit-linear-gradient(top,#fff 1%,#eaeaea 100%);
+    background: -o-linear-gradient(top,#fff 1%,#eaeaea 100%);
+    background: -ms-linear-gradient(top,#fff 1%,#eaeaea 100%);
+    background: linear-gradient(top,#fff 1%,#eaeaea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff',endColorstr='#eaeaea',GradientType=0 );
+    box-shadow: 0 0 0 1px rgba(155,155,155,0.3),1px 0 0 rgba(255,255,255,0.9) inset,0 2px 2px rgba(0,0,0,0.1);
+    font-size: 20px;
+    line-height: 20px;
+}
 
+.ac-container {
+    width: 100%;
+    margin: 10px auto 30px auto;
+}
+
+.ac-container label:hover {
+    background: #fff;
+}
+
+.ac-container input {
+    display: none;
+}
+
+.ac-container article {
+    background: rgba(255,255,255,0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -moz-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -o-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    -ms-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+}
+
+.ac-container article p {
+    font-style: normal;
+    color: #777;
+    line-height: 23px;
+    padding: 0 20px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+    font: normal normal 20px 'Roboto';
+}
+
+article {
+    -webkit-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -moz-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -o-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    -ms-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+    box-shadow: 0 0 0 1px rgba(155,155,155,0.3);
+}
+
+.ac-container input:checked ~ article.ac-small {
+    height: auto;
+}
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">Welcome to the Docs of Apio minting</h1>
+    <p>Apio minting is a easy tool to make easier for people like you the creation of collection and minting of NFTS, allowing you with <b>0</b> knowledge of informatic and programming the deploy of this task, the only you need is do a little form "|insert url form|" depending of what service you want, then follow the steps of below. </br> <b>Requierements:</b> you need use <a href="https://www.postman.com/" target="_blank">Postman.</a>.</p>
+    <section class="ac-container">
+        <div>
+            <input id="ac-1" name="accordion-1" type="radio">
+            <label for="ac-1">First. Store image data to IPFS</label>
+            <article class="ac-small">
+                <img src="./img/file.png" style="width: -webkit-fill-available;">
+                <p>You need to open postman and do the next steps.</p>
+                <p>First: Set the method in <b>post</b> (by default get), and fill the bar with the next endpoint <b>http://localhost:5000/nfts/v0/file</b>.</p>
+                <p>Second: Go to the tab <b>Authorization</b>.</p>
+                <p>Third: Go to the type, and choose <b>API Key</b> for authorization method.</p>
+                <p>Fourth: The name of the Key is <b>APIO_KEY</b>, in value user your Api-Key sent to your mail after complete the form, and add to <b>Header</b>.</p>
+                <img src="./img/file2.png" style="width: -webkit-fill-available;">
+                <p>After that you are going to sent the file.</p>
+                <p>First: Go to the tab <b>Body</b>.</p>
+                <p>Second: Inside body let's press the radius button of the <b>form-data</b>.</p>
+                <p>Third: The submited file must have the key name <b>file</b>.</p>
+                <p>Fourth: Then uncollapse and choose the <b>File</b> data upload.</p>
+                <p>Fith: In value pick your image, at the moment we only accept one image.</p>
+                <p>Sixth: Send and waint.</p>
+                <img src="./img/file3.png" style="width: -webkit-fill-available;">
+                <p>This is a normal response, if you get this congratulations you have upload your image.</p>
+                <p>In the response you receive the CID, the IPFs URL, the URL to see your image, the Name of your file and the image to have a preview.</p>
+            </article>
+        </div>
+        <div>
+            <input id="ac-2" name="accordion-1" type="radio">
+            <label for="ac-2">Second. Store file data to IPFS</label>
+            <article class="ac-small">
+                <img src="./img/metadata.png" style="width: -webkit-fill-available;">
+                <p>You need to open postman and do the next steps.</p>
+                <p>First: Set the method in <b>post</b> (by default get), and fill the bar with the next endpoint <b>http://localhost:5000/nfts/v0/metadata</b>.</p>
+                <p>Second: Go to the tab <b>Authorization</b>.</p>
+                <p>Third: Go to the type, and choose <b>API Key</b> for authorization method.</p>
+                <p>Fourth: The name of the Key is <b>APIO_KEY</b>, in value user your Api-Key sent to your mail after complete the form, and add to <b>Header</b>.</p>
+                <img src="./img/metadata2.png" style="width: -webkit-fill-available;">
+                <p>After that you are going to write and sent your metadata file.</p>
+                <p>First: Go to the tab <b>Body</b>.</p>
+                <p>Second: Inside body let's press the radius button of the <b>raw</b>.</p>
+                <p>Third: Choose the format of the text <b>JSON</b>.</p>
+                <p>Fourth: The content inside the file, remember is required have a <b>name, image and description</b> parameters and in the case you add attributes is required <b>trait_type</b> and <b>value</b>.</p>
+                <p>Fith: Send and wait</p>
+                <img src="./img/metadata3.png" style="width: -webkit-fill-available;">
+                <p>This is a normal response, if you get this congratulations you have create and upload your metadata file.</p>
+                <p>In the response you receive the CID, the IPFs URL and the URL to see your metadata file.</p>
+            </article>
+        </div>
+        <div>
+            <input id="ac-3" name="accordion-1" type="radio">
+            <label for="ac-3">Third. Create collection</label>
+            <article class="ac-small">
+                <img src="./img/collection.png" style="width: -webkit-fill-available;">
+                <p>You need to open postman and do the next steps.</p>
+                <p>First: Set the method in <b>post</b> (by default get), and fill the bar with the next endpoint <b>http://localhost:5000/nfts/v0/collection</b>.</p>
+                <p>Second: Go to the tab <b>Authorization</b>.</p>
+                <p>Third: Go to the type, and choose <b>API Key</b> for authorization method.</p>
+                <p>Fourth: The name of the Key is <b>APIO_KEY</b>, in value user your Api-Key sent to your mail after complete the form, and add to <b>Header</b>.</p>
+                <img src="./img/collection2.png" style="width: -webkit-fill-available;">
+                <p>After that you are going to create a collection.</p>
+                <p>First: Go to the tab <b>Body</b>.</p>
+                <p>Second: Inside body let's press the radius button of the <b>raw</b>.</p>
+                <p>Third: Choose the format of the text <b>JSON</b>.</p>
+                <p>Fourth: The <b>name and symbol</b> of the NFT (this two parameters are required).</p>
+                <p>Fith: Send and wait</p>
+                <img src="./img/collection3.png" style="width: -webkit-fill-available;">
+                <p>This is a normal response, if you get this congratulations you have create and upload your metadata file.</p>
+                <p>In the response you receive the transaction hash and URL.</p>
+            </article>
+        </div>
+        <div>
+            <input id="ac-4" name="accordion-1" type="radio">
+            <label for="ac-4">Fourth. Mint NFT</label>
+            <article class="ac-small">
+                <p>Before anything, you need to go to the URL of the transaction collection,</p>
+                <img src="./img/collection4.png" style="width: -webkit-fill-available;">
+                <p>Usually if you go at the moment to the transaction, you're going to see a window like this, if so wait until the window change like below.</p>
+                <img src="./img/collection5.png" style="width: -webkit-fill-available;">
+                <p>This a example of the transaction at the moment that is succeeds, after that you are allow to mint the NFT.</p>
+                <img src="./img/mint.png" style="width: -webkit-fill-available;">
+                <p>You need to open postman and do the next steps.</p>
+                <p>First: Set the method in <b>post</b> (by default get), and fill the bar with the next endpoint <b>http://localhost:5000/nfts/v0/mint</b>.</p>
+                <p>Second: Go to the tab <b>Authorization</b>.</p>
+                <p>Third: Go to the type, and choose <b>API Key</b> for authorization method.</p>
+                <p>Fourth: The name of the Key is <b>APIO_KEY</b>, in value user your Api-Key sent to your mail after complete the form, and add to <b>Header</b>.</p>
+                <img src="./img/mint2.png" style="width: -webkit-fill-available;">
+                <p>After that you are going to mint your nft.</p>
+                <p>First: Go to the tab <b>Body</b>.</p>
+                <p>Second: Inside body let's press the radius button of the <b>raw</b>.</p>
+                <p>Third: Choose the format of the text <b>JSON</b>.</p>
+                <p>Fourth: The <b>wallet</b> and IPFS URL of the <b></b>metadata file</b> of the NFT (this two parameters are required).</p>
+                <p>Fith: Send and wait</p>
+                <img src="./img/mint3.png" style="width: -webkit-fill-available;">
+                <p>This is a normal response, if you get this congratulations you have mint your NFT and finish all.</p>
+                <p>In the response you receive the transaction hash and URL.</p>
+                <img src="./img/mint4.png" style="width: -webkit-fill-available;">
+                <p>Then go to the transaction and wait until is verified like the other contract.</p>
+                <img src="./img/mint5.png" style="width: -webkit-fill-available;">
+                <p>When this is done you can go to your <a href="https://testnets.opensea.io/account" target="_blank">opensea account</a>.</p>
+                <img src="./img/mint6.png" style="width: -webkit-fill-available;">
+                <p>Once you enter and log in you can see your NFT in your collection and with all parameters that you add.</p>
+            </article>
+        </div>
+    </section>
 </body>
 </html>
