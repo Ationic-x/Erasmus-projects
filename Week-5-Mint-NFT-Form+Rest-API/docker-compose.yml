@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  api:
+    container_name: API
+    restart: always
+    build:
+      context: ./API
+    ports:
+      - 5000:5000
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - 127.0.0.1:27017:27017
