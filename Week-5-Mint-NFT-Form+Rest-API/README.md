@@ -1,3 +1,5 @@
+_The readme and wiki is a bit outdated (in future is going to be changed)_
+
 # API with Express Toolkit + Solidity + Hardhat
 
 - REST-API that recieve data from a form (webhook), make and store a user with her authentication in the database and send a confirmation email, after that with the auth can in postman store metadata files and images (using NFT.Storage), and after make a collection and mint the nfts.
